@@ -7,7 +7,7 @@ public class WeatherTracker implements WeatherTraceable {
     String currentWeather;
 
     @Override
-    public void notifyAllObservers() {
+    public void alertWatchers() {
         observers.forEach(observer -> observer.updateWeather(this.currentWeather));
     }
 }
